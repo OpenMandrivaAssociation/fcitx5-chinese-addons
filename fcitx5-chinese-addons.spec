@@ -2,6 +2,8 @@ Name:		fcitx5-chinese-addons
 Version:	5.1.8
 Release:	1
 Source0:	https://github.com/fcitx/fcitx5-chinese-addons/archive/%{version}/%{name}-%{version}.tar.gz
+Source1:	http://download.fcitx-im.org/data/py_stroke-20121124.tar.gz
+Source2:	http://download.fcitx-im.org/data/py_table-20121124.tar.gz
 Summary:	Chinese input system addons for fcitx
 URL:		https://github.com/fcitx/fcitx5-chinese-addons
 License:	LGPL-2.1
@@ -23,6 +25,7 @@ BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(OpenCC)
+BuildRequires:	cmake(fmt)
 BuildRequires:	boost-devel
 BuildRequires:	gettext
 BuildSystem:	cmake
@@ -37,6 +40,9 @@ Requires: %{name} = %{EVRD}
 
 %description devel
 Development files for %{name}
+
+%prep -a
+cp %{S:1} %{S:2} modules/pinyinhelper
 
 %files -f %{name}.lang
 %{_bindir}/scel2org5
