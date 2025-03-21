@@ -24,6 +24,7 @@ BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(OpenCC)
 BuildRequires:	boost-devel
+BuildRequires:	gettext
 BuildSystem:	cmake
 
 %description
