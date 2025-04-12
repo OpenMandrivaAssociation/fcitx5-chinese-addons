@@ -1,6 +1,6 @@
 Name:		fcitx5-chinese-addons
 Version:	5.1.8
-Release:	1
+Release:	2
 Source0:	https://github.com/fcitx/fcitx5-chinese-addons/archive/%{version}/%{name}-%{version}.tar.gz
 Source1:	http://download.fcitx-im.org/data/py_stroke-20121124.tar.gz
 Source2:	http://download.fcitx-im.org/data/py_table-20121124.tar.gz
